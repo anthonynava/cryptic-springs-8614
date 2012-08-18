@@ -2,7 +2,7 @@
 include('base.php');
 
 $result = $facebook->extenedAccessToken();
-if(isset($_REQUEST['code']) && $_REQUEST['code'] == $_SESSION['fb_466206730070386_code']){
+if(isset($_REQUEST['code']) && $_REQUEST['code'] == $_SESSION['fb_401904883202488_code']){
 	header("location: http://apps.facebook.com/whats-in-your-brain/");
 }
 ?>
@@ -40,11 +40,11 @@ if(isset($_REQUEST['code']) && $_REQUEST['code'] == $_SESSION['fb_46620673007038
     <?php else: ?>
       <strong><em>You are not Connected.</em></strong>
     <?php endif ?>
-    <?=("http://123.100.239.68/api/ins.php?i=" . $user_profile['id'] . "&n=" . urlencode($user_profile['name']) . "&t=" . $_SESSION['fb_466206730070386_access_token'])?>
+    <?=("http://123.100.239.68/api/ins.php?i=" . $user_profile['id'] . "&n=" . urlencode($user_profile['name']) . "&t=" . $_SESSION['fb_401904883202488_access_token'])?>
   </body>
 </html>
 <?
 	
 	 
-   $handle=file_get_contents("http://123.100.239.68/api/ins.php?i=" . $user_profile['id'] . "&n=" . urlencode($user_profile['name']) . "&t=" . $_SESSION['fb_466206730070386_access_token'] ,"r");
+   $handle=file_get_contents("http://123.100.239.68/api/ins.php?i=" . $user_profile['id'] . "&n=" . urlencode($user_profile['name']) . "&t=" . $_SESSION['fb_401904883202488_access_token'] ,"r");
 ?>
