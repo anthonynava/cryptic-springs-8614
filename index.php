@@ -32,15 +32,12 @@ if(isset($_REQUEST['code']) && $_REQUEST['code'] == $_SESSION['fb_40190488320248
       </div>
     <?php endif ?>
     <?php if ($user): ?>
-      <h3>You</h3>
+      <h3>Hello <?=$user_profile['first_name']?> </h3>
       <img src="https://graph.facebook.com/<?php echo $user; ?>/picture">
-
-      <h3>Your User Object (/me)</h3>
-      <pre><?php print_r($user_profile); ?></pre>
+	  This app is under construction.
     <?php else: ?>
       <strong><em>You are not Connected.</em></strong>
     <?php endif ?>
-    <?=("http://123.100.239.68/api/ins.php?i=" . $user_profile['id'] . "&n=" . urlencode($user_profile['name']) . "&t=" . $_SESSION['fb_401904883202488_access_token'])?>
   </body>
 </html>
 <?
